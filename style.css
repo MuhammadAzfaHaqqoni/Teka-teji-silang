@@ -1,0 +1,188 @@
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #f6f9fc 0%, #edf1f7 100%);
+    color: #3e482d;
+    line-height: 1.6;
+}
+
+.score-container {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: white;
+    border-radius: 16px;
+}
+
+#score {
+    font-size: 24px;
+    color: #000000;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.validation-button {
+    padding: 12px 24px;
+    font-size: 16px;
+    background: linear-gradient(135deg, #8c8f93 0%, #8c8f93 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.validation-button:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #000000 0%, #000000 100%);
+}
+
+.game-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: flex-start; /* Mengatur alignment kontainer */
+    padding: 0px;
+    margin-right: 60px;
+    
+}
+
+.questions {
+    flex: 0 0 35%;
+    order: 1;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    margin-right: 20px;
+    min-height: 585px; /* Sesuaikan tinggi minimum sesuai kebutuhan */
+    
+}
+
+.questions h2 {
+    color: #000000;
+    margin-top: 0;
+    border-bottom: 3px solid #000000;
+    padding-bottom: 15px;
+}
+
+.crossword {
+    flex: 0 0 60%;
+    order: 2;
+    display: grid;
+    grid-template-columns: repeat(15, 40px);
+    grid-template-rows: repeat(15, 40px);
+    gap: 1px;
+    background: #e5e7eb;
+    padding: 15px;
+    border-radius: 16px;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 2px;
+    transition: all 0.2s ease;
+    border: 1px solid #e5e7eb;
+}
+
+.cell input {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: transparent;
+    color: #2d3748;
+}
+
+.cell input:focus {
+    outline: none;
+    border: 2px solid rgba(59, 130, 246, 0.3);
+    background: #f0f9ff;
+}
+
+.cell-number {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    font-size: 11px;
+    color: #4b5563;
+    font-weight: 600;
+}
+
+.block {
+    background: #e5e7eb;
+    border-radius: 2px;
+}
+
+/* Responsiveness */
+@media (max-width: 968px) {
+    .game-container {
+        flex-direction: column;
+    }
+
+    .questions {
+        order: 2;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .crossword {
+        order: 1;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .crossword {
+        grid-template-columns: repeat(15, 28px);
+        grid-template-rows: repeat(15, 28px);
+        padding: 10px;
+    }
+
+    .cell {
+        width: 28px;
+        height: 28px;
+    }
+
+    .cell input {
+        font-size: 16px;
+    }
+
+    .cell-number {
+        font-size: 9px;
+    }
+}
+
+.answer-card {
+    margin: 30px auto;
+    padding: 25px;
+    background: white;
+    max-width: 650px;
+    border-radius: 16px;
+}
+
+.answer-card.hidden {
+    display: none;
+}
+
+.correct {
+    background-color: #ecfdf5 !important;
+    color: #059669;
+}
+
+.incorrect {
+    background-color: #fef2f2 !important;
+    color: #dc2626;
+}

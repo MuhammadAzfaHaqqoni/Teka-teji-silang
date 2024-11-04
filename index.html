@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>UTS Muhammad Azfa Haqqoni 1227050086</title>
+</head>
+<body>
+    <div class="score-container">
+        <p id="score">Score: 0</p>
+        <button class="validation-button" onclick="checkAnswers()">Periksa Jawaban</button>
+    </div>
+
+    <div class="game-container">
+        <div class="questions">
+            <h2>Question</h2>
+            <h3>Mendatar:</h3>
+            <ul id="across-questions"></ul>
+            <h3>Menurun:</h3>
+            <ul id="down-questions"></ul>
+        </div>
+        <div class="crossword"></div>
+    </div>
+
+    <div id="answer-card" class="answer-card hidden">
+        <h3>Kunci Jawaban</h3>
+        <div id="answers"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
